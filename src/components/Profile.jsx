@@ -24,6 +24,9 @@ const Profile = () => {
                     <div className={s.item}>
                         post 2
                     </div>
+                    <div>
+                        post 3
+                    </div>
                 </div>
             </div>
         </div>
