@@ -8,32 +8,4 @@
   ". h h ."
   ". n c .";
   grid-gap: 10px;
-  
-}
-
-.header{
-  grid-area: h;
-  background-color: aqua;
-}
-
-.header img {
-  width: 50px;
-}
-
-.nav {
-  grid-area: n;
-  background-color: salmon;
-}
-
-.nav a {
-  margin-left: 10px;
-}
-
-.profile{
-  grid-area: c;
-  background-color: springgreen;
-}
-
-.profile img {
-  width: 500px;
 }

@@ -1,11 +1,12 @@
 import React from 'react';
 import imageContent from './../images/BreakingBad.jpg';
+import s from './Profile.module.css';
 
 const Profile = () => {
     return (
-        <div className='profile'>
+        <div className={s.profile}>
             <div>
-                <img src={imageContent} />
+                <img className={s.profile__img} src={imageContent} />
             </div>
             <div>
                 ava + description
@@ -16,11 +17,11 @@ const Profile = () => {
                 <div>
                     New posts
                 </div>
-                <div>
-                    <div>
+                <div className={s.posts}>
+                    <div className={s.item}>
                         post 1
                     </div>
-                    <div>
+                    <div className={s.item}>
                         post 2
                     </div>
                 </div>
