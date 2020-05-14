@@ -1,3 +1,12 @@
-.posts{
+.postsBlock{
     color: none;
+    margin-left: 20px;
+}
+
+.addbutton {
+    margin-left: 93px;
+}
+
+.posts {
+    margin-top: 10px;
 }

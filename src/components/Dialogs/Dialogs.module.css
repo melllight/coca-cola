@@ -1,0 +1,23 @@
+.dialogs{
+    display: grid;
+    grid-template-columns: 1.5fr 3fr; /* столбцы: имеется ширина сайта, пополам */
+}
+
+.dialogsItems{
+    padding: 15px;
+}
+.dialogsItems .active{
+    color: red;
+}
+.dialogs .dialog{
+
+}
+
+.messages{
+    padding: 15px;
+}
+
+.messages .message{
+
+}
+
