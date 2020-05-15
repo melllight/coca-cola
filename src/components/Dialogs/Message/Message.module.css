@@ -1,0 +1,20 @@
+.messageOnlyItem {
+    display: grid;
+    grid-template-columns: 1fr 6fr;
+    margin-bottom: 15px;
+}
+
+.messageImage img {
+    width: 50px;
+    border-radius: 30px;
+}
+
+.messageName {
+    color: blue;
+    font-size: 14px;
+    font-weight: 600;
+}
+
+.messageContent {
+
+}

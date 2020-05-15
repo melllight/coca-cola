@@ -1,30 +1,29 @@
-.dialogsBlock{
+.dialogsBlock {
     display: grid;
-    grid-template-columns: 2fr 3fr; /* столбцы: имеется ширина сайта, пополам */
-    grid-template-areas: "d m";
+    grid-template-columns: 2fr 4fr; /* столбцы: имеется ширина сайта, пополам */
+    /*grid-template-areas: "d m";*/
 }
 
-.dialogsFriendItems{
-    grid-area: d;
+.dialogsFriendItems {
+    /*grid-area: d;*/
 }
 
-.messagesFriendItems{
-    padding: 15px;
-    grid-area: m;
+.messagesFriendItems {
+    padding-top: 25px;
+    padding-left: 25px;
+    padding-right: 25px;
+    /*grid-area: m;*/
 }
 
-/*.dialogsFriendItems .dialogOnlyItem .nameFriend{
-    margin-top: 100px;
-
+.submitMessage {
+    padding-top: 38.5%;
 }
 
-.dialogsFriendItems .dialogOnlyItem a.activeLink .nameFriend{
-    color: red;
+.submitButton {
+    padding-top: 16px;
 }
 
-.dialogImage{
-    width: 60px;
-    height: 60px;
-    border-radius: 30px;
-}*/
-
+.submitContent {
+    margin-bottom: -6px;
+    width: 300px;
+}

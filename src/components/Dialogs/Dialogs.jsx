@@ -27,6 +27,10 @@ const Dialogs = (props) => {
             </div>
             <div className={s.messagesFriendItems}>
                 {messagesElements}
+                <div className={s.submitMessage}>
+                    <textarea className={s.submitContent} placeholder="Введите сообщение..."></textarea>
+                    <button className={s.submitButton}>Отправить</button>
+                </div>
             </div>
         </div>
     )

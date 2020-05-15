@@ -1,0 +1,13 @@
+.imageFriend {
+    width: 50px;
+    border-radius: 25px;
+}
+
+.itemFriends{
+    margin-left: 5px;
+    margin-right: 5px;
+}
+
+.nameFriend {
+    text-align: center;
+}
