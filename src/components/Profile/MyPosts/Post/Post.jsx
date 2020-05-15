@@ -7,7 +7,7 @@ const Post = (props) => {
             <img src='https://7lafa.com/musicians/martin_garrix.jpg' />
             {props.message}
             <div>
-                <span>like</span>
+                <span>like </span>{props.likesCount}
             </div>
         </div>
     )
