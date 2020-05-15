@@ -1,23 +1,30 @@
-.dialogs{
+.dialogsBlock{
     display: grid;
-    grid-template-columns: 1.5fr 3fr; /* столбцы: имеется ширина сайта, пополам */
+    grid-template-columns: 2fr 3fr; /* столбцы: имеется ширина сайта, пополам */
+    grid-template-areas: "d m";
 }
 
-.dialogsItems{
-    padding: 15px;
+.dialogsFriendItems{
+    grid-area: d;
 }
-.dialogsItems .active{
+
+.messagesFriendItems{
+    padding: 15px;
+    grid-area: m;
+}
+
+/*.dialogsFriendItems .dialogOnlyItem .nameFriend{
+    margin-top: 100px;
+
+}
+
+.dialogsFriendItems .dialogOnlyItem a.activeLink .nameFriend{
     color: red;
 }
-.dialogs .dialog{
 
-}
-
-.messages{
-    padding: 15px;
-}
-
-.messages .message{
-
-}
+.dialogImage{
+    width: 60px;
+    height: 60px;
+    border-radius: 30px;
+}*/
 

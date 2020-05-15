@@ -1,0 +1,30 @@
+a {
+    text-decoration: none;
+}
+
+.twoElements{
+    display: grid;
+    grid-template-columns: 1fr 3fr;
+}
+
+.dialogOnlyItem a .twoElements {
+    border: 1px solid white;
+    border-left: none;
+    padding: 10px;
+}
+
+.dialogOnlyItem a.activeDialogItem .twoElements {
+    background-color: deepskyblue;
+}
+
+.dialogImage {
+    width: 60px;
+    height: 60px;
+    border-radius: 30px;
+}
+
+.nameFriend {
+    color: black;
+    margin-left: 5px;
+    margin-top: 5px;
+}
