@@ -1,6 +1,7 @@
-import React from 'react';
+import React, {createRef} from 'react';
 import s from './MyPosts.module.css';
 import Post from './Post/Post';
+import {addTextPost} from "../../../redux/state";
 
 const MyPosts = (props) => {
 
@@ -8,15 +9,31 @@ const MyPosts = (props) => {
         (<Post id={post.id} message={post.message} likesCount={post.likesCount} />)
     );
 
+    let newPostElement = createRef();
+
+    let addPost = () => {
+        props.addPost();
+    }
+
+    let onPostChange = () => {
+        let text = newPostElement.current.value;
+        props.updateNewPostText(text);
+    }
+
     return (
         <div className={s.postsBlock}>
             <h3>My Posts</h3>
             <div>
                 <div>
-                    <textarea>Текст поста</textarea>
+                    <textarea
+                        onChange={onPostChange}
+                        ref={newPostElement}
+                        placeholder='Введите текст...'
+                        value={props.state.newPostText}
+                    />
                 </div>
                 <div className={s.addbutton}>
-                    <button>Add Post</button>
+                    <button onClick={addPost}>Add Post</button>
                 </div>
             </div>
             <div className={s.posts}>
