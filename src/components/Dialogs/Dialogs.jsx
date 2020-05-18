@@ -2,34 +2,28 @@ import React, {createRef} from 'react';
 import s from './Dialogs.module.css';
 import DialogItem from "./DialogItem/DialogItem";
 import Message from "./Message/Message";
-import {addMessageActionCreator, onMessageChangeActionCreator} from "../../redux/state";
+import {addMessageActionCreator, onMessageChangeActionCreator} from "../../redux/dialogs-reducer";
 
 const Dialogs = (props) => {
 
-    let dialogsElements = props.state.dialogs.map((dialogObj) =>
-        (<DialogItem
-            id={dialogObj.id}
-            name={dialogObj.name}
-            image={dialogObj.image}
-        />)
+    let state = props.store.getState().dialogsPage;
+
+    let dialogsElements = state.dialogs.map((dialogObj) =>
+        (<DialogItem id={dialogObj.id} name={dialogObj.name} image={dialogObj.image}/>)
     );
 
-    let messagesElements = props.state.messages.map((messageObj) =>
-        (<Message
-            id={messageObj.id}
-            message={messageObj.message}
-        />)
+    let messagesElements = state.messages.map((messageObj) =>
+        (<Message id={messageObj.id} message={messageObj.message}/>)
     );
-
-    let newMessageElement = createRef();
 
     let addMessage = () => {
-        props.dispatch(addMessageActionCreator());
+        props.store.dispatch(addMessageActionCreator());
     }
 
-    let onMessageChange = () => {
-        let text = newMessageElement.current.value;
-        props.dispatch(onMessageChangeActionCreator(text));
+    //e (event) - событие (в данном случае событие textarea)
+    let onMessageChange = (e) => {
+        let text = e.target.value;
+        props.store.dispatch(onMessageChangeActionCreator(text));
     }
 
     return (
@@ -44,13 +38,10 @@ const Dialogs = (props) => {
                         onChange={onMessageChange}
                         className={s.submitContent}
                         placeholder="Введите сообщение..."
-                        ref={newMessageElement}
-                        value={props.state.newMessageText}
+                        value={state.newMessageText}
                     />
-                    <button
-                        className={s.submitButton}
-                        onClick={addMessage}>
-                        Отправить
+                    <button className={s.submitButton} onClick={addMessage}>
+                        Send
                     </button>
                 </div>
             </div>
